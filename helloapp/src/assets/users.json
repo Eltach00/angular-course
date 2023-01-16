@@ -1,16 +1,16 @@
 {
   "userList": [
     {
-      "name": "Bob",
-      "age": 28
+      "userName": "Bob",
+      "userAge": 28
     },
     {
-      "name": "Tom",
-      "age": 45
+      "userName": "Tom",
+      "userAge": 45
     },
     {
-      "name": "Alice",
-      "age": 32
+      "userName": "Alice",
+      "userAge": 32
     }
   ]
 }
