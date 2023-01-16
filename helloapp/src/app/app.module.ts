@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
 import { AppComponent } from './app.component'
-import { FormsModule, ReactiveFormsModule } from '@angular/forms'
-import { DataModule } from './data/data.module'
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, DataModule, ReactiveFormsModule],
+  imports: [BrowserModule, HttpClientModule],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
 })
