@@ -9,3 +9,10 @@ p {
   font-family: Verdana;
   color: #555;
 }
+
+.active {
+  color: red;
+}
+.navigation {
+  margin-left: 1rem;
+}
