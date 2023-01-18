@@ -12,6 +12,8 @@ import { ItemStatComponent } from './child-components/item.stats.component'
 import { AboutGuard } from './guard/about.guard'
 import { ExitAboutGuard } from './guard/exit.about.guard'
 import { FormatPipe } from './pipes/format.pipe'
+import { JoinPipe } from './pipes/array-to-string.pipe'
+import { HttpClientModule } from '@angular/common/http'
 
 const itemRoutes = [
   { path: 'details', component: ItemDetailsComponent },
@@ -30,7 +32,12 @@ const appRoutes: Routes = [
 ]
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, RouterModule.forRoot(appRoutes)],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule,
+  ],
   declarations: [
     AppComponent,
     HomeComponent,
@@ -40,6 +47,7 @@ const appRoutes: Routes = [
     ItemDetailsComponent,
     ItemStatComponent,
     FormatPipe,
+    JoinPipe,
   ],
   providers: [AboutGuard, ExitAboutGuard],
   bootstrap: [AppComponent],

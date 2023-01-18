@@ -7,18 +7,7 @@ import { User } from './user'
 export class HttpService {
   errorMessage = ''
   constructor(private httpClient: HttpClient) {}
-  getUsers(): Observable<User[]> {
-    return this.httpClient.get('assets/usersP.json').pipe(
-      map((data: any) =>
-        data.userList.map(
-          (user: any): User => new User(user.userName, user.userAge)
-        )
-      ),
-      catchError((err) => {
-        console.log(err)
-        this.errorMessage = err.message
-        return []
-      })
-    )
+  getUsers() {
+    return this.httpClient.get('../assets/users.json')
   }
 }
